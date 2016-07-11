@@ -24,7 +24,7 @@ if(!preg_match("/^[a-z]\d{8}$/", $_POST['sid'])) {
 }
 
 if(!preg_match("/^[a-z]\d{2}7[02]5\d{3}$/", $_POST['sid'])) {
-  if(!ws_check($_POST['sid'])) {
+  if(!check_ws($_POST['sid'])) {
     fin('轉系或雙主修同學，請先使用 SSH 登入系上工作站，並在自己的家目錄執行 mkdir public_html 命令後申請，方能自動驗證身份');
   }
 }
