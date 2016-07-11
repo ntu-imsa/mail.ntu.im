@@ -50,12 +50,21 @@
                                 <a href="https://drive.google.com/a/ntu.im/" class="btn btn-default btn-lg"><i class="fa fa-cloud fa-fw"></i> <span class="network-name">前往雲端硬碟</span></a>
                             </li>
                             <li>
-                                <a href="https://docs.google.com/forms/d/1vrr3yrfALFodrHxuB9WzNuGieeDlGEyA50LVp_h-T78/viewform" class="btn btn-default btn-lg"><i class="fa fa-edit fa-fw"></i> <span class="network-name">新申請</span></a>
+                                <a onclick="document.getElementById('applyForm').style.display=''" class="btn btn-default btn-lg"><i class="fa fa-edit fa-fw"></i> <span class="network-name">新申請</span></a>
                             </li>
                             <li>
                                 <a href="https://docs.google.com/spreadsheets/d/1fUFv0aDC5DbaZAWYQ52J8uOowmNndr4CQbGKHZnEC8g/htmlview" class="btn btn-default btn-lg"><i class="fa fa-list-ul fa-fw"></i> <span class="network-name">贊助紀錄</span></a>
                             </li>
                         </ul>
+                        <div id="applyForm" style="display:none;max-width:300px;margin:0 auto">
+                          <br>
+                          <iframe style="width:0;height:0" name="applyResult"></iframe>
+                          <form target="applyResult" action="apply.php" method="POST">
+                            <input class="form-control" name="user" placeholder="想要的帳號"><br>
+                            <input class="form-control" name="sid" placeholder="學號"><br>
+                            <input class="btn btn-primary" type="submit" value="送出！">
+                          </form>
+                        </div>
                     </div>
                 </div>
             </div>
